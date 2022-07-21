@@ -10,8 +10,9 @@ public class Main {
         g.addEdge(2, 3);
         g.addEdge(3, 3);
 
-        System.out.println("Breadth First Traversal ");
+        System.out.println("Breadth First Traversal: ");
         g.BFS(2);
+        System.out.println();
 
         // DFS TRAVERSAL
         Graph2 g2 = new Graph2(6);
