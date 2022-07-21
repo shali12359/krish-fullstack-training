@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "icon": "https://robohash.org/illoinharum.png?size=50x50&set=set1",
+        "firstname": "Lal",
+        "lastname": "Perera",
+        "designation": "Manager",
+        "insBalance": 3277.3,
+        "rbtProgress": 22
+    },
+    {
+        "id": 2,
+        "icon": "https://robohash.org/earumaut.png?size=50x50&set=set1",
+        "firstname": "Kamal",
+        "lastname": "Silva",
+        "designation": "HR",
+        "insBalance": 2277.3,
+        "rbtProgress": 67
+    },
+    {
+        "id": 3,
+        "icon": "https://robohash.org/sintautatum.png?size=50x50&set=set1",
+        "firstname": "Sudam",
+        "lastname": "Yapa",
+        "designation": "HR",
+        "insBalance": 2277.3,
+        "rbtProgress": 89
+    },
+    {
+        "id": 4,
+        "icon": "https://robohash.org/voluptatemauttotam.png?size=50x50&set=set1",
+        "firstname": "Nisal",
+        "lastname": "Mapa",
+        "designation": "SE",
+        "insBalance": 2277.3,
+        "rbtProgress": 45
+    },
+    {
+        "id": 5,
+        "icon": "https://robohash.org/aliasdelenitidolor.png?size=50x50&set=set1",
+        "firstname": "Vindi",
+        "lastname": "Mendis",
+        "designation": "QA",
+        "insBalance": 4577.3,
+        "rbtProgress": 76
+    }
+]

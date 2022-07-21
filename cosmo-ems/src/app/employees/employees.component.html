@@ -1,0 +1,59 @@
+<div class="container p-5">
+    <div class="card mt-5">
+            <div class="card-header text-success text-center fw-bold">
+                <div class="row d-flex justify-content-center mt-3">
+                    {{ title }} <br>
+                    <span class="text-secondary fw-normal">{{ message }}</span>
+                </div>
+            </div>
+        <div class="card-body mt-3">
+            <div class="row d-flex justify-content-center mt-3">
+                <div class="col-md-2">Designation Filter : </div>
+                <div class="col-md-4">
+                    <input type="text" name="" id="" [(ngModel)]="designationFilter">
+                </div>
+            </div>
+            <div class="row  d-flex justify-content-center mb-3">
+                <div class="col-md-6">
+                    <h6>Filter by : {{ designationFilter }}</h6>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table" *ngIf="employees.length">
+                    <thead>
+                        <tr>
+                            <th>
+                                <button class="btn btn-success" (click)="toggleIcon()">
+                                    {{ showIcon? "Hide " : "Show "}} Avatar
+                                </button>
+                            </th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Designation</th>
+                            <th>Insurance Balance</th>
+                            <th>RBT progress</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let emp of filterEmp">
+                            <td>
+                                <img [src]="emp.icon" alt="" *ngIf="showIcon">
+                            </td>
+                            <td>{{ emp.firstname }}</td>
+                            <td>{{ emp.lastname }}</td>
+                            <td>{{ emp.designation }}</td>
+                            <td>{{ emp.insBalance | currency:"LKR":"symbol":"2.2-2" | lkrFormatter:"Rs: "}}</td>
+                            <td>
+                                <em-progress-bar 
+                                    [progress]='emp.rbtProgress'
+                                    [fName]='emp.firstname'
+                                    (progressClick)='onMessageReceived($event)'>
+                                </em-progress-bar>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
