@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c2348a9d-7171-4274-b66d-26ca1390830c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../SpringTraining/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringTraining/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringTraining/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringTraining/SpringTraining.iml" afterDir="false" />
-    </list>
+    <list default="true" id="c2348a9d-7171-4274-b66d-26ca1390830c" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
