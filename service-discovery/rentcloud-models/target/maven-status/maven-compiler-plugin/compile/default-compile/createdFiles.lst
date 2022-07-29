@@ -1,0 +1,4 @@
+com\prabath\rentcloud\model\customer\Customer.class
+com\prabath\rentcloud\model\customer\Loyality.class
+com\prabath\rentcloud\model\vehicle\Vehicle.class
+com\prabath\rentcloud\model\rent\Rent.class
