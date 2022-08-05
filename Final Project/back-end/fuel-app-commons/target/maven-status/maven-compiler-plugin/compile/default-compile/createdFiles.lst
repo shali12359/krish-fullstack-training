@@ -1,0 +1,4 @@
+com\fuelapp\models\Order.class
+com\fuelapp\models\Schedule.class
+com\fuelapp\models\Stock.class
+com\fuelapp\models\Allocation.class

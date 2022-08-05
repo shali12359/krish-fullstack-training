@@ -1,0 +1,38 @@
+spring:
+  kafka:
+    producer:
+      bootstrap-server: 127.0.0.1:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+  jpa:
+    generate-ddl: true
+    hibernate:
+      show-sql: true
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQL81Dialect
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/fuelapp
+    username: postgres
+    password: 14491
+
+auto:
+  create:
+    topics:
+      enable: true
+
+server:
+  port: 9093
+
+order:
+  topic:
+    name: allocation-topic
+
+allocation:
+  topic:
+    name: allocation-topic
