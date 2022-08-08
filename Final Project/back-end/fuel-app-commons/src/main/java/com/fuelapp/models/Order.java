@@ -14,6 +14,7 @@ public class Order implements Serializable {
     String stationName;
     int stationId;
     String status;
+    String dispatchDate;
 
     public int getOrderId() {
         return orderId;
@@ -61,5 +62,13 @@ public class Order implements Serializable {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public String getDispatchDate() {
+        return dispatchDate;
+    }
+
+    public void setDispatchDate(String dispatchDate) {
+        this.dispatchDate = dispatchDate;
     }
 }

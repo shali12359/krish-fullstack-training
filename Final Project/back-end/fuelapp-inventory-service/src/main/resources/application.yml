@@ -31,7 +31,7 @@ server:
 
 order:
   topic:
-    name: allocation-topic
+    name: order-topic
 
 allocation:
   topic:

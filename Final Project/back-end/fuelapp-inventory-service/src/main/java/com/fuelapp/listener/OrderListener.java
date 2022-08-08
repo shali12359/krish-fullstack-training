@@ -34,22 +34,16 @@ public class OrderListener {
     @Autowired
     KafkaTemplate<String, String> kafkaTemplate;
 
-    @Autowired
-    KafkaTemplate<String, String> kafkaTemplate2;
-
     ObjectMapper mapper = new ObjectMapper();
     ObjectMapper mapper2 = new ObjectMapper();
 
-    @Value("${order.topic.name}")
+    @Value("${allocation.topic.name}")
     private String topicName;
 
-    @Value("${allocation.topic.name}")
-    private String topicName2;
-
     // LISTEN TO KAFKA: METHOD
-    @KafkaListener(topics = {"order-topic", "allocation-topic"}, groupId = "groupId")
+    @KafkaListener(topics = "order-topic", groupId = "groupId")
     public void processOrder(String orderStr) {
-        System.out.println("Received: " + orderStr);
+        System.out.println("Received to Inventory: " + orderStr);
 
         try {
             // READ CREATED ORDER DETAILS FROM KAFKA
@@ -69,14 +63,17 @@ public class OrderListener {
                 // SAVE ORDER ALLOCATION
                 allocationRepo.save(allocation);
 
+
+                // WRITE ALLOCATION TO KAFKA
                 String allocationStr = mapper2.writeValueAsString(allocation);
-                kafkaTemplate2.send(topicName2, allocationStr);
+                kafkaTemplate.send(topicName, allocationStr);
+                System.out.println("allocationStr: " + allocationStr);
 
                 // SET ORDER STATUS
                 updateOrder.setStatus("Allocated");
 
-                System.out.println("Stock: " + stock.getAmount());
-                System.out.println("Available: " + availableStock);
+//                System.out.println("Stock: " + stock.getAmount());
+//                System.out.println("Available: " + availableStock);
 
                 // UPDATE AVAILABLE STOCK
                 stock.setAmount(availableStock);

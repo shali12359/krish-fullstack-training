@@ -27,8 +27,12 @@ auto:
       enable: true
 
 server:
-  port: 9094
+  port: 9096
 
 allocation:
   topic:
     name: allocation-topic
+
+dispatch:
+  topic:
+    name: dispatch-topic

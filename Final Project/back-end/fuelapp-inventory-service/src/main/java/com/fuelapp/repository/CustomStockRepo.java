@@ -10,6 +10,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface CustomStockRepo extends JpaRepository<Stock, Long> {
     // CUSTOM METHOD FOR GET STOCK DETAILS BY STATION ID & FUEL TYPE
-    @Query(value = "SELECT * FROM stock WHERE station_id = :station_id AND fueltype = :fueltype", nativeQuery = true)
+    @Query(value = "SELECT * FROM stock WHERE station_id = :station_id AND fuel_type = :fueltype", nativeQuery = true)
     Stock findByStationId(@Param("station_id") int stationId, @Param("fueltype") String type);
 }

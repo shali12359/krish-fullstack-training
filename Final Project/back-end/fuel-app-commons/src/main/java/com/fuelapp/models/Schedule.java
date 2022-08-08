@@ -9,7 +9,6 @@ public class Schedule {
     @GeneratedValue(strategy = GenerationType.AUTO)
     int scheduleId;
     int orderId;
-    String date;
 
     public int getScheduleId() {
         return scheduleId;
@@ -25,13 +24,5 @@ public class Schedule {
 
     public void setOrderId(int orderId) {
         this.orderId = orderId;
-    }
-
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
     }
 }

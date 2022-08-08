@@ -10,7 +10,7 @@ public class Stock implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     int stockId;
     double amount;
-    String type;
+    String fuelType;
     String stationName;
     int stationId;
 
@@ -30,12 +30,12 @@ public class Stock implements Serializable {
         this.amount = amount;
     }
 
-    public String getType() {
-        return type;
+    public String getFuelType() {
+        return fuelType;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setFuelType(String fuelType) {
+        this.fuelType = fuelType;
     }
 
     public String getStationName() {
