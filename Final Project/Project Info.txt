@@ -1,0 +1,3 @@
+Front-end => Angular
+Back-end => Order/Inventory/Schedule Services - Spring boot, Kafka, PostgresSQL
+                    Dispatch Service - Node, Express, KafkaJs, PostgresSQL
